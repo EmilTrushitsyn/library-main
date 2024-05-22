@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin=""
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin=""
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <img class="logo" src="./Images/logo.png" alt="" />
+      <div class="link1">
+        <div class="links">
+          <a href="main.html" class="linki"> О нас</a>
+          <a href="mapka.html" class="linki"> Где нас найти</a>
+          <a href="catalog.html" class="linki"> Каталог</a>
+        </div>
+        <div class="auth-buttons">
+          <button class="sign" onclick="window.location.href='sign.html';">
+            Вход
+          </button>
+          <button class="reg" onclick="window.location.href='register.html';">
+            Регистрация
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="text1">
+      <img class="aalto" src="./Images/aalto.jpg" alt="" />
+      <p class="text2">
+        Муниципальное автономное учреждение культуры "Центральная городская
+        библиотека А. Аалто" муниципального образования "Город Выборг"
+        Выборгского района Ленинградской области Сокращенное название: МАУК
+        "Библиотека А. Аалто"
+      </p>
+    </div>
+
+    <div class="video">
+      <video controls width="840" height="480">
+        <source
+          src="./Images/Библиотека Алвара Аалто в Выборге, памятник эпохи функционализма 1935 года.mp4"
+          type="video/webm"
+        />
+      </video>
+      <h2>Городская библиотеки А. Аалто"</h2>
+    </div>
+
+    <div class="constructor">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./Images/idiot_dostoevskiy_fedor_3_lp_melodiya_sssr_1602_1.jpg"
+              class="d-block w-100"
+              alt="f"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Images/karcevilchenkozhvaneckiy_various_artists_1_lp_melodiya_sssr_2_0.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Images/pticy_sssr_opredelitel_po_golosam_various_artists_1_lp_melodiya_sssr_0503_1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-block">
+          <p>Учредитель: Муниципальное образование «Город Выборг»</p>
+          <p>Дата создания: 7 ноября 1944 года.</p>
+        </div>
+        <div class="footer-block">
+          <p>Директор: Рогозина Елена Сергеевна</p>
+          <p>Телефон: 8 (81378) 2 49 37</p>
+          <p>
+            e-mail:
+            <a href="mailto:e.rogozina@aaltolibrary.ru"
+              >e.rogozina@aaltolibrary.ru</a
+            >
+          </p>
+        </div>
+        <div class="footer-block">
+          <p>
+            Адрес: 188800 Ленинградская область, г. Выборг, пр. Суворова, д. 4
+          </p>
+          <p>Телефон: 8 (81378) 2-11-53</p>
+          <p>Телефон/факс: 8 (81378) 2-42-79</p>
+          <p>
+            e-mail:
+            <a href="mailto:marketing@aaltolibrary.ru"
+              >marketing@aaltolibrary.ru</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

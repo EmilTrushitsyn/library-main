@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/card.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="./Images/logo.png" alt="Logo" />
+    <link rel="stylesheet" href="/singin.js">
+    <div class="link1">
+      <div class="links">
+        <a href="main.html" class="linki">О нас</a>
+        <a href="mapka.html" class="linki">Где нас найти</a>
+        <a href="catalog.html" class="linki">Каталог</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sort-container">
+    <label for="sort">Сортировать по:</label>
+    <select id="sort">
+      <option value="title-asc">Название (A-Z)</option>
+      <option value="title-desc">Название (Z-A)</option>
+    </select>
+  </div>
+
+  <div class="cards" id="cards">
+    <div class="card" data-title="Идиот">
+      <img src="./Images/idiot_dostoevskiy_fedor_3_lp_melodiya_sssr_1602_1.jpg" alt="Идиот" />
+      <p>Идиот</p>
+    </div>
+    <div class="card" data-title="Карцев и Ильченко">
+      <img src="./Images/karcevilchenkozhvaneckiy_various_artists_1_lp_melodiya_sssr_2_0.jpg" alt="Карцев и Ильченко" />
+      <p>Карцев и Ильченко</p>
+    </div>
+    <div class="card" data-title="Птицы СССР">
+      <img src="./Images/pticy_sssr_opredelitel_po_golosam_various_artists_1_lp_melodiya_sssr_0503_1.jpg" alt="Птицы СССР" />
+      <p>Птицы СССР</p>
+    </div>
+    <div class="card" data-title="Пушкину посвящается">
+      <img src="./Images/pushkinu_posvyashchetsya_various_artists_1_lp_melodiya_sssr_1.jpg" alt="Пушкину посвящается" />
+      <p>Пушкину посвящается</p>
+    </div>
+    <div class="card" data-title="Шестое чувство">
+      <img src="./Images/shestoe_chuvstvo_gumilev_nikolay_1_lp_melodiya_sssr_1.jpg" alt="Шестое чувство" />
+      <p>Шестое чувство</p>
+    </div>
+    <div class="card" data-title="Стихи и песни">
+      <img src="./Images/stihi_i_pesni_rubcov_nikolay_2_lp_melodiya_sssr_2404_1.jpg" alt="Стихи и песни" />
+      <p>Стихи и песни</p>
+    </div>
+    <div class="card" data-title="Стихотворения">
+      <img src="./Images/stihotvoreniya_voznesenskiy_andrey_1_lp_melodiya_sssr_2_0_0.jpg" alt="Стихотворения" />
+      <p>Стихотворения</п>
+    </div>
+    <div class="card" data-title="Страницы русской поэзии">
+      <img src="./Images/stranicy_russkoy_poezii_xviii-xx_vekov_bednyy_demyan_1_melodiya_sssr_1.jpg" alt="Страницы русской поэзии" />
+      <p>Страницы русской поэзии</п>
+    </div>
+    <div class="card" data-title="Страницы русской поэзии Маяковский">
+      <img src="./Images/stranicy_russkoy_poezii_xviii-xx_vekov_mayakovskiy_vladimir_2_lp_melodiya_sssr_1.jpg" alt="Страницы русской поэзии Маяковский" />
+      <p>Страницы русской поэзии Маяковский</п>
+    </div>
+    <div class="card" data-title="Тагильская находка">
+      <img src="./Images/tagilskaya_nahodka_andronikov_irakliy_1_lp_melodiya_sssr_1.jpg" alt="Тагильская находка" />
+      <п>Тагильская находка</п>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-block">
+        <p>Учредитель: Муниципальное образование «Город Выборг»</p>
+        <p>Дата создания: 7 ноября 1944 года.</p>
+      </div>
+      <div class="footer-block">
+        <p>Директор: Рогозина Елена Сергеевна</p>
+        <p>Телефон: 8 (81378) 2 49 37</p>
+        <p>
+          e-mail:
+          <a href="mailto:e.rogozina@aaltolibrary.ru"
+            >e.rogozina@aaltolibrary.ru</a
+          >
+        </p>
+      </div>
+      <div class="footer-block">
+        <p>
+          Адрес: 188800 Ленинградская область, г. Выборг, пр. Суворова, д. 4
+        </p>
+        <p>Телефон: 8 (81378) 2-11-53</p>
+        <p>Телефон/факс: 8 (81378) 2-42-79</p>
+        <p>
+          e-mail:
+          <a href="mailto:marketing@aaltolibrary.ru"
+            >marketing@aaltolibrary.ru</a
+          >
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script >function sortCards() {
+    const cardsContainer = document.getElementById("cards");
+    const cards = Array.from(cardsContainer.getElementsByClassName("card"));
+    const sortOption = document.getElementById("sort").value;
+  
+    let sortedCards;
+  
+    switch (sortOption) {
+      case "title-asc":
+        sortedCards = cards.sort((a, b) =>
+          a.dataset.title.localeCompare(b.dataset.title)
+        );
+        break;
+      case "title-desc":
+        sortedCards = cards.sort((a, b) =>
+          b.dataset.title.localeCompare(a.dataset.title)
+        );
+        break;
+      default:
+        sortedCards = cards;
+    }
+  
+    cardsContainer.innerHTML = "";
+    sortedCards.forEach((card) => cardsContainer.appendChild(card));
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("sort").addEventListener("change", sortCards);
+  });
+  </script>
+</body>
+</html>
